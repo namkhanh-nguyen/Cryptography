@@ -3,7 +3,7 @@ package algorithms;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class MorseCode {
+public class Morse {
 
     // HashMap for storing Morse code mappings
     private static final HashMap<Character, String> morseEncodeMap = new HashMap<>();

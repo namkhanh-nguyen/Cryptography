@@ -1,5 +1,5 @@
-import algorithms.MorseCode;
-import algorithms.VigenereCipher;
+import algorithms.Morse;
+import algorithms.Vigenere;
 
 import java.util.Scanner;
 
@@ -24,9 +24,9 @@ public class Main {
         scanner.nextLine();
 
         if(choice == 1)
-            MorseCode.runMorseEncryption(nextChoice, scanner);
+            Morse.runMorseEncryption(nextChoice, scanner);
         else if (choice == 2)
-            VigenereCipher.runVigenereCipher(nextChoice, scanner);
+            Vigenere.runVigenereCipher(nextChoice, scanner);
         else
             System.out.println("Invalid choice");
 

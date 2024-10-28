@@ -2,7 +2,7 @@ package algorithms;
 
 import java.util.Scanner;
 
-public class VigenereCipher {
+public class Vigenere {
 
     // Method to encode plaintext using the Vigenere cipher
     public static String encode(String plaintext, String keyword) {
