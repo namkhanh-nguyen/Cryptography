@@ -12,7 +12,7 @@ public class MorseCode {
     // Initializing the Morse code map
     static {
     	
-    	//Alphabet
+    	//Latin alphabet
         morseEncodeMap.put('A', ".-");
         morseEncodeMap.put('B', "-...");
         morseEncodeMap.put('C', "-.-.");
@@ -44,7 +44,6 @@ public class MorseCode {
         morseEncodeMap.put('Ä', ".-.-");
         morseEncodeMap.put('Ö', "---.");
         morseEncodeMap.put('Ü', "..--");
-
 
         // Numbers
         morseEncodeMap.put('1', ".----");
@@ -85,6 +84,9 @@ public class MorseCode {
 
     // Method to encode text to Morse code
     public static String encodeToMorse(String text) {
+        if(text == null || text.isEmpty())
+            throw new NullPointerException("text is null");
+
         StringBuilder morse = new StringBuilder();
         for (char c : text.toUpperCase().toCharArray()) 
             if (morseEncodeMap.containsKey(c)) 
@@ -101,8 +103,11 @@ public class MorseCode {
 
     // Method to decode Morse code to text
     public static String decodeFromMorse(String morse) {
+        if(morse == null || morse.isEmpty())
+            throw new NullPointerException("morse is null");
+
         StringBuilder text = new StringBuilder();
-        String[] words = morse.split("   ");  // Splitting words based on 3 spaces
+        String[] words = morse.split(" {3}");  // Splitting words based on 3 spaces
         for (String word : words) {
             String[] characters = word.split(" ");
             for (String morseChar : characters) 
@@ -129,8 +134,8 @@ public class MorseCode {
             String decodedText = decodeFromMorse(morse);
             System.out.println("Decoded Text: " + decodedText);
         }
-        else {
+        else
             System.out.println("Invalid choice.");
-        }
     }
+
 }

@@ -23,16 +23,13 @@ public class Main {
         int nextChoice = scanner.nextInt();
         scanner.nextLine();
 
-        if(choice == 1) {
-            MorseCode morse = new MorseCode();
-            morse.runMorseEncryption(nextChoice, scanner);
-        }
-        else if (choice == 2) {
-            VigenereCipher vigenere = new VigenereCipher();
-            System.out.print("Enter keyword: ");
-            String keyword = scanner.nextLine().toUpperCase();
-            vigenere.runVigenereCipher(nextChoice, keyword, scanner);
-        }
+        if(choice == 1)
+            MorseCode.runMorseEncryption(nextChoice, scanner);
+        else if (choice == 2)
+            VigenereCipher.runVigenereCipher(nextChoice, scanner);
+        else
+            System.out.println("Invalid choice");
+
         scanner.close();
     }
 
