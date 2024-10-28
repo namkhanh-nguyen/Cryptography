@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Generic Encryption Program");
+        System.out.println("General Cryptography");
         System.out.println("Choose an algorithm: ");
         System.out.println("1: Morse code");
         System.out.println("2: Vigenere");
