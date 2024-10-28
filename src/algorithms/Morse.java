@@ -122,14 +122,14 @@ public class Morse {
 
     public static void runMorseEncryption(int choice, Scanner scanner)  {
         if (choice == 1) {
-            System.out.print("Enter text to encode: ");
+            System.out.print("Enter plaintext to encode: ");
             String text = scanner.nextLine();
             String morseCode = encodeToMorse(text);
             System.out.println(morseCode);
         }
         else if (choice == 2)
         {
-            System.out.print("Enter Morse code to decode: ");
+            System.out.print("Enter Morse to decode: ");
             String morse = scanner.nextLine();
             String decodedText = decodeFromMorse(morse);
             System.out.println("Decoded Text: " + decodedText);

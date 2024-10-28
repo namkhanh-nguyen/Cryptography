@@ -14,7 +14,7 @@ public class Main {
         System.out.println("2: Vigenere");
 
         int choice = scanner.nextInt();
-        scanner.nextLine();  // Consume newline
+        scanner.nextLine();
 
         System.out.println("Do you want to encode or decode?");
         System.out.println("1: Encode a message");
