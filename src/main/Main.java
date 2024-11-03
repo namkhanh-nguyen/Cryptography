@@ -1,3 +1,4 @@
+package main;
 import algorithms.Morse;
 import algorithms.Vigenere;
 
